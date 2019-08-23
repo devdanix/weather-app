@@ -1,5 +1,56 @@
+html,
+body {
+  margin: 0;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-around;
+  height: 100%;
+  flex-flow: wrap;
+}
+
+body {
+  height: 100%;
+}
+
+.show {
+  height: 430px;
+  -webkit-transition: all ease 0.6s !important;
+  -moz-transition: all ease 0.6s !important;
+  -o-transition: all ease 0.6s !important;
+  transition: all ease-in-out 0.6s !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.normal {
+  height: 275px;
+  -webkit-transition: all ease 0.6s !important;
+  -moz-transition: all ease 0.6s !important;
+  -o-transition: all ease 0.6s !important;
+  transition: all ease-in-out 0.6s !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.hide-additional-info {
+  opacity: 0;
+  -webkit-transition: all ease 0.6s !important;
+  -moz-transition: all ease 0.6s !important;
+  -o-transition: all ease 0.6s !important;
+  transition: all ease-in-out 0.6s !important;
+}
+
+.show-additional-info {
+  opacity: 1;
+  -webkit-transition: all ease 0.6s !important;
+  -moz-transition: all ease 0.6s !important;
+  -o-transition: all ease 0.6s !important;
+  transition: all ease-in-out 0.6s !important;
 }
 
 .App-logo {
