@@ -37,10 +37,12 @@ export class Forecast extends Component {
     });
   };
 
+  //Function used to toggle forcast info on and off
   toggleInfo = e => {
     const target = e.target.content;
 
-    //target.toggleClass("card-body show");
+    //Check the state cardClass
+    //If is equal to "card-body show" then hide info and toggle class
     if (this.state.cardClass === "card-body show") {
       this.setState({
         cardClass: "card-body normal",

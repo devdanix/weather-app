@@ -22,7 +22,7 @@ class App extends Component {
   getForecast = () => {
     // Check if city name has been populated
     if (this.state.city === "") {
-      alert("Please insert a city name to check and try again.");
+      //alert("Please insert a city name to check and try again.");
       this.setState({
         data: [],
         fetchError: ""
@@ -84,16 +84,21 @@ class App extends Component {
             type="text"
             className="form-control col-md-6"
             id="exampleInputEmail1"
-            aria-describedby="emailHelp"
             placeholder=""
             onChange={this.onFieldChange}
+            autocomplete="off"
+            required
           />
           <small id="emailHelp" className="form-text text-muted">
             Insert the city name you want to get the weather information for.
           </small>
         </div>
 
-        <button className="btn btn-primary" onClick={this.getForecast}>
+        <button
+          className="btn btn-primary"
+          type="submit"
+          onClick={this.getForecast}
+        >
           Get Weather
         </button>
         <p />
