@@ -76,20 +76,52 @@ class App extends Component {
       forecast = <ForecastList forecasts={this.state.data} />;
     }
 
+    // return (
+    //   <div className="container mt-4">
+    //     <div className="form-group">
+    //       <label>City Name</label>
+    //       <input
+    //         type="text"
+    //         className="form-control col-md-6"
+    //         id="exampleInputEmail1"
+    //         placeholder=""
+    //         onChange={this.onFieldChange}
+    //         autocomplete="off"
+    //         required
+    //       />
+    //       <small id="emailHelp" className="form-text text-muted">
+    //         Insert the city name you want to get the weather information for.
+    //       </small>
+    //     </div>
+
+    //     <button
+    //       className="btn btn-primary"
+    //       type="submit"
+    //       onClick={this.getForecast}
+    //     >
+    //       Get Weather
+    //     </button>
+    //     <p />
+    //     <hr />
+
+    //     <div className="row">{forecast}</div>
+
+    //     <p>{error}</p>
+    //   </div>
+    // );
     return (
-      <div className="container mt-4">
-        <div className="form-group">
+      <div className="container">
+        <div className="form">
           <label>City Name</label>
           <input
             type="text"
-            className="form-control col-md-6"
-            id="exampleInputEmail1"
+            className="form-input-field"
             placeholder=""
             onChange={this.onFieldChange}
             autocomplete="off"
             required
           />
-          <small id="emailHelp" className="form-text text-muted">
+          <small className="form-text-small">
             Insert the city name you want to get the weather information for.
           </small>
         </div>
