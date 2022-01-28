@@ -69,7 +69,7 @@ export class Forecast extends Component {
     const humidity = this.props.main.humidity;
 
     return (
-      <div className="col-sm-3">
+      <div className="col-sm-3 mt-30">
         <div className="card text-center">
           <div className={this.state.cardClass}>
             <h5 className="card-title">{this.getDayName(date)}</h5>
@@ -80,7 +80,7 @@ export class Forecast extends Component {
               src={"https://openweathermap.org/img/wn/" + icon + "@2x.png"}
               alt=""
             />
-            <p>{Math.ceil(temp)}</p>
+            <p>{Math.ceil(temp)}°C</p>
             <button className="btn btn-link" onClick={this.toggleInfo}>
               {this.state.showLabel}
             </button>

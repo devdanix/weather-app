@@ -22,7 +22,7 @@ class App extends Component {
   getForecast = () => {
     // Check if city name has been populated
     if (this.state.city === "") {
-      //alert("Please insert a city name to check and try again.");
+
       this.setState({
         data: [],
         fetchError: ""
@@ -40,21 +40,9 @@ class App extends Component {
           data: result
         });
       })
-      //.catch(error => console.log(error));
+
       .catch(error => this.setState({ fetchError: error }));
   };
-
-  // async componentDidMount() {
-  //   try {
-  //     const response = await fetch(
-  //       "https://api.openweathermap.org/data/2.5/forecast?q=London,uk&APPID=5eef0272a2043743b81829bf57ded1e3"
-  //     );
-  //     const json = await response.json();
-  //     this.setState({ data: json });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
 
   // Set state on change city input
   onFieldChange = event => {
@@ -74,39 +62,6 @@ class App extends Component {
       forecast = <ForecastList forecasts={this.state.data} />;
     }
 
-    // return (
-    //   <div className="container mt-4">
-    //     <div className="form-group">
-    //       <label>City Name</label>
-    //       <input
-    //         type="text"
-    //         className="form-control col-md-6"
-    //         id="exampleInputEmail1"
-    //         placeholder=""
-    //         onChange={this.onFieldChange}
-    //         autocomplete="off"
-    //         required
-    //       />
-    //       <small id="emailHelp" className="form-text text-muted">
-    //         Insert the city name you want to get the weather information for.
-    //       </small>
-    //     </div>
-
-    //     <button
-    //       className="btn btn-primary"
-    //       type="submit"
-    //       onClick={this.getForecast}
-    //     >
-    //       Get Weather
-    //     </button>
-    //     <p />
-    //     <hr />
-
-    //     <div className="row">{forecast}</div>
-
-    //     <p>{error}</p>
-    //   </div>
-    // );
     return (
       <div className="container">
         <div className="form">
@@ -116,7 +71,7 @@ class App extends Component {
             className="form-input-field"
             placeholder=""
             onChange={this.onFieldChange}
-            autocomplete="off"
+            autoComplete="off"
             required
           />
           <small className="form-text-small">
@@ -125,7 +80,7 @@ class App extends Component {
         </div>
 
         <button
-          className="btn btn-primary"
+          className="btn btn-primary mt-20"
           type="submit"
           onClick={this.getForecast}
         >

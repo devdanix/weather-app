@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### `npm i`
+
+Run `npm i` to install all app dependencies and npm packages.
+
+Create .env file and add you OpenWeather API KEY as REACT_APP_WEATHER_API_KEY=YOUR_API_KEY
+
+
 ## Available Scripts
 
 In the project directory, you can run:
