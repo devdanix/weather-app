@@ -30,11 +30,9 @@ class App extends Component {
       return;
     }
 
-    fetch(
-      "https://api.openweathermap.org/data/2.5/forecast?q=" +
-        this.state.city +
-        "&APPID=5eef0272a2043743b81829bf57ded1e3&units=metric"
-    )
+    const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
+
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&APPID=${API_KEY}&units=metric`)
       .then(this.handleErrors)
       .then(result => result.json())
       .then(result => {
